@@ -1,0 +1,13 @@
+use("platzi_store")
+
+db.products.updateOne(
+    //El selector o paramatro para buscar
+    {_id:4},
+    //El operador set para modificar los campos indicados o inclusive agregar
+    { 
+        $set:{
+            precio:50000,
+            tasgs:["GH","BO"]
+        }
+    }
+)

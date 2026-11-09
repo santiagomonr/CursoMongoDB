@@ -1,0 +1,28 @@
+use("platzi_store")
+
+//Se bora colecion
+db.products.drop()
+
+//Insertar varios productos
+db.products.insertMany([
+    {
+        _id:1,
+        nombre: "producto 1",
+        precio: 34
+    },{
+        _id:2,
+        nombre: "producto 2",
+        precio: 567
+    },{
+        _id:2,
+        nombre: "producto 3",
+        precio: 67
+    },{
+        _id:4,
+        nombre: "producto 4",
+        precio: 4532
+    },
+    //ordered para indicar que siga insertando sin inportar algun error
+], {ordered:false})
+
+db.products.find()

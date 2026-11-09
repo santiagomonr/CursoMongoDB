@@ -1,0 +1,6 @@
+use("platzi_store")
+
+//EQ que sea igual a eso
+// db.inventory.find({ qty: { $eq:30 } })
+//NE para buscar algo que no sea eso
+// db.inventory.find({ "item.code": { $ne: "123" } })

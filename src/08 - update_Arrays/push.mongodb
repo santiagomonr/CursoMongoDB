@@ -1,0 +1,8 @@
+use("platzi_store")
+
+db.inventory.updateOne({_id:2},
+    //Push para agregar elemento a un array
+    {$push:{tags: "Driver"}}
+)
+
+db.inventory.find()

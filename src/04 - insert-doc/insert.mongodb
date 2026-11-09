@@ -1,0 +1,16 @@
+use("platzi_store")
+
+db.products.insertOne({
+    _id:2,
+    nombre:"Enbuidos",
+    precio:15000
+})
+
+db.products.insertOne({
+    _id:4,
+    nombre:"Carne Cerdo",
+    precio:15000
+})
+
+use("platzi_store")
+db.products.find()

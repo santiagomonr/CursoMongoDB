@@ -1,0 +1,10 @@
+use("platzi_store")
+// regex para buscar por expresiones regulares
+// db.inventory.find({"item.description": {$regex:/line/}})
+// el /i es para que iguale las mayusculas y las minisculas
+// db.inventory.find({"item.description": {$regex:/LINE/i}})
+// db.inventory.find({"item.description": {$regex:/LINE$/i}})
+// el ^ es para indicar que empieza por es palabra o letra
+// db.inventory.find({"item.description": {$regex:/^Single/i}})
+// el m es para detectar los saltos de linea
+// db.inventory.find({"item.description": {$regex:/^M/im}})

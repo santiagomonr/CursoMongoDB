@@ -1,0 +1,25 @@
+use("sample_training")
+
+// db.trips.find()
+
+//operador expr para operar o comparar dos atributos de un mismo documento
+// db.trips.find(
+//     {
+//         $expr:{
+//             $eq:["$start station id","$end station id"]
+//         }
+//     }
+// ).count()
+
+//consultas anidadas con los operadores
+db.trips.find(
+    {
+        $expr:{
+            $and:[
+                { $gte:["$tripduration", 1200]},
+                { $eq:["$start station id","$end station id"]}
+            ]
+        }
+    }
+).count()
+

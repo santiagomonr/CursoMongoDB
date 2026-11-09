@@ -1,0 +1,12 @@
+use("sample_training")
+
+db.zips.updateMany({city:"CLEVELAND"},
+    //Agregar o modificar un atributo
+    // { $set:{ color:"cualquier"}
+    // para renombrar un atributo sin tocar el valor
+    // }
+    // { $rename:{color:"c0l0r"}
+    // para borrar un atributo
+    { $unset:{ c0l0r:"" }
+    }
+)

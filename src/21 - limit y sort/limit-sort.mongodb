@@ -1,0 +1,11 @@
+use("sample_training")
+
+//sort con 1 ordena de forma ascendete y con -1 de forma decendente
+db.zips.find(
+    {
+        pop:{ $lte: 8000 }
+    }
+)
+.sort({ pop:-1 })
+.limit(3)
+.skip(1)

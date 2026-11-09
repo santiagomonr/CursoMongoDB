@@ -1,0 +1,46 @@
+use("sample_training")
+
+// db.inspections.find(
+//     {
+//         sector: "Locksmith - 062",
+//         result: "No Violation Issued"
+//     }
+// ).count()
+
+// operador logico "and" la estructura es [{},{},{}]
+// db.inspections.find(
+//     {  
+//         $and:[
+//             { sector: "Locksmith - 062"},
+//             {result: "No Violation Issued"}
+//         ]
+//     }
+// ).count()
+
+// operador logico "or" la estructura es [{},{},{}]
+// db.inspections.find(
+//     {  
+//         $or:[
+//             { sector: "Locksmith - 062"},
+//             {result: "No Violation Issued"}
+//         ]
+//     }
+// ).count()
+
+// operador logico "nor" la estructura es [{},{},{}]
+// db.inspections.find(
+//     {  
+//         $nor:[
+//             { sector: "Locksmith - 062"},
+//             { result: "No Violation Issued"}
+//         ]
+//     }
+// ).count()
+
+// la negación de not, recibe o regex o un objeto
+// db.inspections.find({
+//     result: {
+//         $not: {$regex: /Unable to Locate/}
+//     }
+// })
+

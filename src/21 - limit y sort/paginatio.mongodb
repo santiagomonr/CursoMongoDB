@@ -1,0 +1,7 @@
+use("platzi_store")
+
+db.categories
+.find()
+.sort({ _id:-1 })
+.skip(2)
+.limit(2)

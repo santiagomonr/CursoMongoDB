@@ -1,0 +1,13 @@
+use("platzi_store")
+
+db.inventory.updateMany({},
+    //pull para eliminar elemento de un array
+    // {$pull:{tags: "book"}}
+    { $pull:
+        { tags:{
+            //IN para encontrar elementos un un array que coincidan con lo indicado
+            $in:["school", "appliance"]
+        }}
+    }
+    
+)

@@ -1,0 +1,29 @@
+use("platzi_store")
+
+//$in y $nin funciona tanto para valores como arrays
+//Operador $in para indicar que se busque por esos valores, normalmente es igual a un "o" en condicionales
+// db.inventory.find({qty:{$in:[20,25]}})
+//db.inventory.find({tags:{$in:["appliance","bag"]}})
+
+//Al contrario de $in el $nin es para indicar que traiga lo que sea diferente a eso
+// db.inventory.find({qty:{$nin:[20,25]}})
+// db.inventory.find({tags:{$nin:["appliance","bag"]}})
+
+//Ejemplos de consultas sin operadores de arrays
+// db.inventory.find({tags: ["appliance"] })
+// db.inventory.find({tags: "appliance" })
+
+// el $all es para buscar todos lo que contenga la instruccion y funciona com un "y" en condicionales
+// db.inventory.find({tags: {$all: ["appliance" , "book", "rit"]} })
+// el $size es para consultar por el tamaño del array
+// db.inventory.find({tags: {$size:3 } })
+
+//el elemMatch sirve para buscar dentro de un array con objetos
+// db.survey.find(
+//     { results:
+//         { $elemMatch:
+//             {  product: "abc", score:{$gt:7}} }
+//     }
+// )
+
+

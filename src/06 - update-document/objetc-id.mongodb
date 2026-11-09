@@ -1,0 +1,9 @@
+use("platzi_store")
+
+db.products.updateOne(
+    //Cuando se requiere buscar por id automatico de mongo
+    {_id:ObjectId("6aeea21cb009cd2469f12108")},
+    { 
+        $inc:{ precio:14 }
+    }
+)

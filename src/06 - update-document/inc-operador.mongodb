@@ -1,0 +1,10 @@
+use("platzi_store")
+
+db.products.updateOne(
+    //El selector o paramatro para buscar
+    {_id:4},
+    //El operador %inc para incrementar los campos numericos
+    { 
+        $inc:{ precio:2 }
+    }
+)

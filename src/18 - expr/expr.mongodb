@@ -1,0 +1,16 @@
+use("platzi_store")
+
+// db.monthlyBudget.find({
+//     spent: {$lt:300}
+// })
+
+
+//operador expr para operar o comparar dos atributos de un mismo documento
+db.monthlyBudget.find(
+    {
+        $expr:{
+            $lte:["$spent","$budget"]
+        }
+    }
+)
+
